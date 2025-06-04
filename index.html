@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sate Padang Jam Gadang</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"> <!-- Ganti ke file CSS eksternal -->
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Sate Padang">
+    <nav>
+      <ul>
+        <li><a href="#sate">Sate</a></li>
+        <li><a href="#cemilan">Cemilan</a></li>
+        <li><a href="#minuman">Minuman</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#cart">Keranjang</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Selamat Datang di Sate Padang Jam Gadang</h1>
+    <p>Menikmati Sate Padang dengan cita rasa asli, siap memanjakan lidah Anda!</p>
+  </section>
+
+ <!-- Menu Section -->
+   <section id="sate" class="menu">
+        <h2>Sate</h2>
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="img/sate-sapi.jpg" alt="Daging Sapi">
+                <h3>Daging Sapi</h3>
+                <p>Harga: Rp 15.000</p>
+                <button onclick="addToCart('Daging Sapi', 15000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/sate-lidah.jpg" alt="Lidah Sapi">
+                <h3>Lidah Sapi</h3>
+                <p>Harga: Rp 15.000</p>
+                <button onclick="addToCart('Lidah Sapi', 15000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/sate-ayam.jpg" alt="Daging Ayam">
+                <h3>Daging Ayam</h3>
+                <p>Harga: Rp 15.000</p>
+                <button onclick="addToCart('Daging Ayam', 15000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cemilan" class="menu">
+        <h2>Cemilan</h2>
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="img/kerupuk_jangek.jpg" alt="Kerupuk Jangek">
+                <h3>Kerupuk Jangek</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Kerupuk Jangek', 5000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/keripik_singkong.jpg" alt="Keripik Singkong">
+                <h3>Keripik Singkong</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Keripik Singkong', 5000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/telur_asin.jpg" alt="Telur Asin">
+                <h3>Telur Asin</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Telur Asin', 5000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="minuman" class="menu">
+        <h2>Minuman</h2>
+        <div class="menu-list">
+            <div class="menu-item">
+                <img src="img/teh_telur.jpg" alt="Teh Telur">
+                <h3>Teh Telur</h3>
+                <p>Harga: Rp 15.000</p>
+                <button onclick="addToCart('Teh Telur', 15000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/teh.jpg" alt="Teh">
+                <h3>Teh</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Teh', 5000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/kopi.jpg" alt="Kopi">
+                <h3>Kopi</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Kopi', 5000)">Tambah ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/minuman_botol.jpg" alt="Minuman Botol">
+                <h3>Minuman Botol</h3>
+                <p>Harga: Rp 5.000</p>
+                <button onclick="addToCart('Minuman Botol', 5000)">Tambah ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+  <section id="cart" class="cart">
+    <h2>Keranjang Belanja</h2>
+    <ul id="cart-items"></ul>
+    <p>Total Harga: Rp <span id="total-price">0</span></p>
+    <button onclick="clearCart()">Kosongkan Keranjang</button>
+  </section>
+
+<div class="whatsapp-wrapper">
+  <a id="whatsapp-order" class="whatsapp-icon" target="_blank">
+    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+  </a>
+</div>
+
+
+
+  <section id="contact" class="contact">
+    <h2>Kontak Kami</h2>
+    <p>Hubungi kami di nomor 0896-3036-8693 atau melalui email di <a href="mailto:satepadangjamgadangmay@gmail.com">satepadangjamgadangmay@gmail.com</a></p>
+    <p>Atau chat kami di WhatsApp:</p>
+    <a href="https://wa.me/6289630368693" class="whatsapp-icon" target="_blank">
+        <i class="fab fa-whatsapp"></i> Chat via WhatsApp
+    </a>
+  </section>
+
+  <a href="#cart" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+
+  <footer>
+    <p>&copy; 2025 Sate Padang Jam Gadang</p>
+  </footer>
+
+  <script>
+  const cartItems = [];
+  let totalPrice = 0;
+
+  function addToCart(itemName, price) {
+    cartItems.push({ name: itemName, price });
+    updateCart();
+  }
+
+  function generateWhatsAppMessage() {
+    if (cartItems.length === 0) return "";
+
+    let message = "Halo, saya ingin memesan:\n";
+    cartItems.forEach((item, index) => {
+      message += `${index + 1}. ${item.name} - Rp ${item.price.toLocaleString()}\n`;
+    });
+    message += `\nTotal: Rp ${totalPrice.toLocaleString()}\n`;
+    message += "Terima kasih.";
+
+    return encodeURIComponent(message);
+  }
+
+  function updateWhatsAppLink() {
+    const baseURL = "https://wa.me/6289630368693?text=";
+    const link = baseURL + generateWhatsAppMessage();
+    document.getElementById("whatsapp-order").href = link;
+  }
+
+  function updateCart() {
+    const cartList = document.getElementById("cart-items");
+    const totalElement = document.getElementById("total-price");
+    cartList.innerHTML = "";
+    totalPrice = 0;
+    cartItems.forEach((item) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - Rp ${item.price.toLocaleString()}`;
+      cartList.appendChild(li);
+      totalPrice += item.price;
+    });
+    totalElement.textContent = totalPrice.toLocaleString();
+    updateWhatsAppLink(); // ini wajib dipanggil
+  }
+
+  function clearCart() {
+    cartItems.length = 0;
+    updateCart();
+  }
+</script>
+
+</body>
+</html>
